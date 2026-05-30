@@ -1,3 +1,9 @@
+```
+┌─ KUSTOD™ ──────────────────────┐
+│  the AI that tells you  "no."  │
+└────────────────────────────────┘
+```
+
 # 💼 Business KUSTOD
 
 **For:** sales, BDM, account managers, founders.

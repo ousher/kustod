@@ -1,3 +1,9 @@
+```
+┌─ KUSTOD™ ──────────────────────┐
+│  the AI that tells you  "no."  │
+└────────────────────────────────┘
+```
+
 # 🛡️ Security KUSTOD
 
 **For:** cyber, SOC, presales, security architects.

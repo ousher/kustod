@@ -1,3 +1,9 @@
+```
+┌─ KUSTOD™ ──────────────────────┐
+│  the AI that tells you  "no."  │
+└────────────────────────────────┘
+```
+
 # 🧓 Everyday KUSTOD
 
 **For:** non-technical humans. Life, not work.
