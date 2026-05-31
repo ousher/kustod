@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" role="img" aria-label="KUSTOD — the working partner that pushes back">
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#11151d"/>
+      <stop offset="1" stop-color="#0a0d13"/>
+    </linearGradient>
+  </defs>
+
+  <!-- panel -->
+  <rect x="2" y="2" width="1196" height="276" rx="16" fill="url(#ink)"/>
+  <rect x="2.5" y="2.5" width="1195" height="275" rx="15.5" fill="none" stroke="#1c2230" stroke-width="2"/>
+
+  <!-- subtle circuit traces (accent) -->
+  <g stroke="#F5D90A" stroke-width="2" fill="none" opacity="0.30" stroke-linecap="square">
+    <path d="M44 70 H150 V46"/>
+    <path d="M44 210 H120 V234"/>
+    <path d="M1156 70 H1060 V48"/>
+    <path d="M1156 210 H1086 V188"/>
+  </g>
+  <g fill="#F5D90A" opacity="0.55">
+    <circle cx="150" cy="46" r="4"/>
+    <circle cx="120" cy="234" r="4"/>
+    <circle cx="1060" cy="48" r="4"/>
+    <circle cx="1086" cy="188" r="4"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="600" y="150" text-anchor="middle"
+        font-family="'JetBrains Mono','SFMono-Regular','Courier New',monospace"
+        font-size="122" font-weight="700" letter-spacing="16" fill="#ECEAE4">KUSTOD</text>
+
+  <!-- accent underline (highlighter) -->
+  <rect x="352" y="170" width="496" height="7" rx="3.5" fill="#F5D90A"/>
+
+  <!-- trademark -->
+  <text x="872" y="98" font-family="'JetBrains Mono',monospace" font-size="20" fill="#555048">™</text>
+
+  <!-- tagline -->
+  <text x="600" y="224" text-anchor="middle"
+        font-family="'JetBrains Mono','SFMono-Regular','Courier New',monospace"
+        font-size="25" letter-spacing="5" fill="#8a8580">the working partner that pushes back</text>
+</svg>
