@@ -154,6 +154,6 @@ Day 7  Review: what did it get WRONG? Fix the setup.
 
 ---
 
-> **Stop shipping AI that agrees with you. A partner that pushes back — and remembers why.**
+> **Stop using AI that agrees with you. A partner that pushes back — and remembers why.**
 
 *KUSTOD Starter Pack v0.1 · free · MIT · feedback wanted.*

@@ -6,7 +6,7 @@
 
 # 🔨 KUSTOD
 
-### Stop shipping AI that agrees with you. Ship a working partner that pushes back — and remembers why.
+### Stop using AI that agrees with you. Ship a working partner that pushes back — and remembers why.
 
 **A 10-minute setup that turns any AI chat tool into a consistent working partner.**
 No install · no login · no platform · works in ChatGPT · Claude · Copilot · Gemini.
