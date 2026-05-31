@@ -14,6 +14,7 @@
      Options: highlighter-yellow #F5D90A (ink text) · pine-green #1F8A4C (white text) */
   --accent: #2D5BFF;
   --accent-ink: #FFFFFF;  /* text on accent — white on blue/green, ink on yellow */
+  --cta-text: #F5D90A;    /* punch text for CTA buttons — yellow on ink-blue */
 
   /* highlighter band — tinted so ink text stays readable on any accent */
   --mark: color-mix(in srgb, var(--accent) 30%, transparent);
@@ -94,17 +95,18 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
   text-decoration: none; cursor: pointer; border: 2px solid var(--ink);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
-.btn-primary { background: var(--accent); color: var(--accent-ink); border-color: var(--ink); }
+.btn-primary { background: var(--accent); color: var(--cta-text); border-color: var(--ink); }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--ink); }
 .btn-ghost { background: transparent; color: var(--ink); }
 .btn-ghost:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--ink); }
-.nav-cta {
+/* higher specificity than `.nav-links a` so the CTA text wins (yellow, not dim) */
+.nav-links a.nav-cta {
   font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
-  background: var(--accent); color: var(--accent-ink);
+  background: var(--accent); color: var(--cta-text);
   padding: 8px 14px; border-radius: 8px; text-decoration: none;
   border: 2px solid var(--ink);
 }
-.nav-cta:hover { box-shadow: 3px 3px 0 var(--ink); }
+.nav-links a.nav-cta:hover { color: var(--cta-text); box-shadow: 3px 3px 0 var(--ink); }
 
 /* === HERO === */
 .hero { padding: 96px 0 80px; }
