@@ -126,6 +126,34 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
 .hero-micro .dot { color: var(--accent); -webkit-text-fill-color: initial; margin: 0 6px; }
 .hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
 
+/* === HERO ROBOT — a little bot that walks across the headline 🤖 === */
+.hero h1 { position: relative; }
+.robot {
+  position: absolute; top: -26px; left: 0; z-index: 3;
+  pointer-events: none; will-change: left, transform;
+  animation: kustod-walk 9s linear infinite;
+}
+.robot .bot {
+  display: inline-block; font-size: 30px; line-height: 1;
+  animation: kustod-bob 0.5s ease-in-out infinite;
+}
+/* walk left → flip → walk back → flip; scaleX faces the bot the right way */
+@keyframes kustod-walk {
+  0%   { left: 0;    transform: translateX(0)     scaleX(1); }
+  47%  { left: 100%; transform: translateX(-100%) scaleX(1); }
+  50%  { left: 100%; transform: translateX(-100%) scaleX(-1); }
+  97%  { left: 0;    transform: translateX(0)     scaleX(-1); }
+  100% { left: 0;    transform: translateX(0)     scaleX(1); }
+}
+@keyframes kustod-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .robot { animation: none; left: 0; transform: none; }
+  .robot .bot { animation: none; }
+}
+
 /* === SECTION HEADINGS === */
 .eyebrow {
   font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500;
