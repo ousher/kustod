@@ -255,6 +255,10 @@ pre.code .ph { color: var(--accent); }
 .panel li { font-size: 15px; padding: 5px 0 5px 22px; position: relative; color: var(--ink); }
 .panel li::before { content: '▸'; position: absolute; left: 0; color: var(--accent-ink);
   background: var(--accent); border-radius: 3px; padding: 0 4px; font-size: 11px; }
+.bridge {
+  font-size: 13.5px; color: var(--dim); margin-top: 18px; max-width: 520px;
+  padding-left: 14px; border-left: 2px solid var(--accent); letter-spacing: 0.2px;
+}
 
 /* === 7-DAY TEST === */
 .days { list-style: none; counter-reset: day; margin-top: 8px; }
