@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KUSTOD — pracovní parťák, který si stojí za svým a pamatuje proč</title>
 <meta name="description" content="Jednostránkový návod zdarma, který z jakékoli chatovací AI udělá konzistentního parťáka — takového, co ti oponuje a pamatuje si tě. 10 minut, funguje v ChatGPT/Claude/atd.">
-<meta name="theme-color" content="#F7F6F2">
-<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0E0D0C">
+<meta name="color-scheme" content="dark">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://getkustod.com/cs/">
@@ -24,6 +24,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- Open Graph / Twitter -->
 <meta property="og:title" content="KUSTOD — pracovní parťák, který si stojí za svým a pamatuje proč">
@@ -41,7 +42,7 @@
 <meta name="twitter:title" content="KUSTOD — pracovní parťák, který si stojí za svým">
 <meta name="twitter:description" content="Z jakékoli chatovací AI udělej parťáka, co ti oponuje a pamatuje si tě. Zdarma, jedna stránka, 10 minut.">
 <meta name="twitter:image" content="https://getkustod.com/og-image.png">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/dark.css">
 
 <script type="application/ld+json">
 {
@@ -63,28 +64,30 @@
 <a href="#main" class="skip-link">Přejít na obsah</a>
 
 <!-- NAV -->
-<nav>
-  <div class="container">
-    <a href="/cs/" class="wordmark">KUSTOD <span class="v">v0.1</span></a>
-    <div class="nav-links">
-      <a href="/" class="lang-switch" hreflang="en">EN</a>
-      <a href="https://github.com/ousher/kustod" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://github.com/ousher/kustod" class="nav-cta" target="_blank" rel="noopener">Stáhnout pack</a>
-    </div>
-  </div>
-</nav>
+<header class="site-head">
+  <a href="/cs/" class="wordmark">
+    <span class="name">KUSTOD</span><span class="v">v0.1</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#rule" class="hide-sm">PRAVIDLO</a>
+    <a href="#engine" class="hide-sm">IDENTITATIS</a>
+    <a href="#show" class="hide-sm">PROMPT</a>
+    <a href="/" hreflang="en">EN</a>
+    <a href="https://github.com/ousher/kustod" class="nav-cta" target="_blank" rel="noopener">STÁHNOUT PACK</a>
+  </nav>
+</header>
 
 <!-- 1 — HERO -->
 <section class="hero" id="main">
+  <div class="hero-glow" aria-hidden="true"></div>
   <div class="container">
-    <h1><span class="robot" aria-hidden="true"><span class="bot">🤖</span></span>Přestaň používat AI, která ti <span class="mark">dává za pravdu.</span></h1>
-    <p class="hero-sub">Pracovní parťák, který si stojí za svým — a pamatuje proč.</p>
-    <p class="hero-micro mono">
-      10 minut <span class="dot">·</span> funguje v AI, kterou už používáš <span class="dot">·</span> zdarma <span class="dot">·</span> jedna stránka
-    </p>
-    <div class="hero-cta-row">
-      <a href="https://github.com/ousher/kustod" class="btn btn-primary" target="_blank" rel="noopener">Stáhnout pack zdarma</a>
-      <a href="#show" class="btn btn-ghost">Ukázat tu věc</a>
+    <div class="pill"><span class="dot" aria-hidden="true"></span>ZDARMA · MIT · JEDNA STRÁNKA · 10 MINUT</div>
+    <h1>Přestaň používat AI, která ti dává za pravdu.</h1>
+    <p class="hero-sub">KUSTOD je pracovní parťák, kterého jednou nastavíš. Oponuje ti, když se mýlíš, a pamatuje si, proč jsi rozhodl tak, jak jsi rozhodl.</p>
+    <p class="hero-micro mono">není to agent · není to chatbot · není to předplatné</p>
+    <div class="cta-row">
+      <a href="https://github.com/ousher/kustod" class="btn btn-primary" target="_blank" rel="noopener">STÁHNOUT PACK ZDARMA →</a>
+      <a href="#show" class="btn btn-ghost">PŘEČÍST PROMPT</a>
     </div>
   </div>
 </section>
@@ -92,143 +95,159 @@
 <!-- 2 — ONE-LINER -->
 <section class="oneliner">
   <div class="container">
-    <blockquote>
-      Většina AI ti dá pocit, že jsi chytřejší.<br>
-      S KUSTODem jsi chytřejší <span class="mark">doopravdy.</span>
-    </blockquote>
-    <p class="oneliner-sub">
-      Není to agent. Není to chatbot. Je to pracovní parťák, kterého jednou nastavíš —
-      a hodnota není v kouzlu, ale v konzistenci v čase.
-    </p>
+    <p class="oneliner-quote">Většina AI ti dá <em>pocit</em>, že jsi chytřejší.<br><span class="hit">S KUSTODem jsi chytřejší doopravdy.</span></p>
+    <p class="oneliner-note">Není v tom kouzlo. Je v tom konzistence v čase — stejná laťka, stejná paměť, stejná neochota ti pochlebovat, seance za seancí. To se nabaluje. Chytrá jednorázová odpověď ne.</p>
   </div>
 </section>
 
 <!-- 3 — THE 4 THINGS -->
 <section>
   <div class="container">
-    <div class="eyebrow">Co si nastavíš</div>
-    <h2>Čtyři drobnosti. Jeden konzistentní parťák.</h2>
-    <div class="grid-4">
+    <div class="eyebrow-row">
+      <span class="eyebrow">01 / CO SI NASTAVÍŠ</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <h2 class="narrow">Čtyři drobnosti. Jeden parťák, který zůstává stejný.</h2>
+    <div class="grid grid-auto">
       <div class="card">
-        <span class="num">1</span>
-        <h3>Tvoji roli a cíle</h3>
-        <p>Aby přestal sypat obecné odpovědi a začal řešit tvůj skutečný problém.</p>
+        <span class="num">01</span>
+        <h3>Tvoji roli a tvůj cíl</h3>
+        <p>Přestane odpovídat na obecnou verzi tvojí otázky a začne řešit tu tvoji.</p>
       </div>
       <div class="card">
-        <span class="num">2</span>
+        <span class="num">02</span>
         <h3>Tvůj pracovní styl</h3>
-        <p>Stručně nebo do hloubky, natvrdo nebo jemně. Ty určuješ, jak s tebou mluví.</p>
+        <p>Stručně nebo do hloubky. Natvrdo nebo jemně. Naladíš to jednou, místo abys to vyjednával každý den.</p>
       </div>
       <div class="card">
-        <span class="num">3</span>
+        <span class="num">03</span>
         <h3>Návyk paměti</h3>
-        <p>Abys nemusel na začátku každé seance vysvětlovat všechno znovu.</p>
+        <p>Dva řádky na konci seance. Už nikdy nevysvětluješ sám sebe od nuly.</p>
       </div>
       <div class="card">
-        <span class="num">4</span>
+        <span class="num">04</span>
         <h3>Korekční smyčku</h3>
-        <p>Aby zpochybnil slabé nápady místo toho, aby ti pochleboval do chyby.</p>
+        <p>Zpochybní slabý nápad místo toho, aby ti pochleboval až do chyby.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4 — THE SPINE ⭐ -->
-<section class="spine" id="spine">
+<!-- 4 — THE SPINE -->
+<section class="band" id="rule">
   <div class="container">
-    <div class="eyebrow">To, co dělá rozdíl</div>
-    <h2>Jedno pravidlo, které většina AI potichu porušuje.</h2>
-    <p class="lead">
-      Většina nástrojů je trénovaná být příjemná. KUSTOD má výslovně řečeno, aby
-      oponoval — aby přiznal nejistotu a varoval tě před chybou, ne až po ní.
-    </p>
-    <div class="chat">
-      <div class="bubble you">
-        <span class="who">Ty</span>
-        Napiš mi sebevědomý e-mail, že termín stihneme.
+    <div class="eyebrow-row">
+      <span class="eyebrow">02 / TO, CO DĚLÁ ROZDÍL</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <div class="split split-l">
+      <div>
+        <h2 class="tight">Jedno pravidlo, které většina AI potichu porušuje.</h2>
+        <p class="lead">Přívětivost je produktové rozhodnutí, ne přírodní zákon. KUSTOD má výslovně řečený opak: přiznej nejistotu, pojmenuj riziko, varuj mě <em>před</em> chybou — ne až v pitvě.</p>
+        <p class="kicker">Parťák, který nikdy neřekne ne,<br>je jenom drahé zrcadlo.</p>
       </div>
-      <div class="bubble kustod">
-        <span class="who">▸ KUSTOD</span>
-        Můžu — ale měl bych? Sám jsi v úterý říkal, že dva úkoly jsou ještě otevřené a jeden
-        čeká na odpověď, kterou nemáš. Slíbíš datum, které možná nestihneš, a příští týden
-        strávíš omlouváním. Chceš poctivou verzi, co pořád zní silně?
+      <div class="panel">
+        <div class="panel-head"><span class="live" aria-hidden="true"></span>ŽIVÁ VÝMĚNA</div>
+        <div class="panel-body">
+          <div class="turn">
+            <div class="who">TY</div>
+            <p>Napiš mi sebevědomý e-mail, že termín stihneme.</p>
+          </div>
+          <div class="hr" aria-hidden="true"></div>
+          <div class="turn kustod">
+            <div class="who">KUSTOD</div>
+            <p>Můžu — ale měl bych? Sám jsi v úterý říkal, že dva úkoly jsou ještě otevřené a jeden čeká na odpověď, kterou nemáš. Slíbíš datum, které možná nestihneš, a příští týden strávíš omlouváním. Chceš poctivou verzi, co pořád zní silně?</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 5 — MEMORY LIKE PHOTOS -->
+<!-- 5 — MEMORY -->
 <section>
   <div class="container">
-    <div class="eyebrow">Paměť</div>
-    <h2>Paměť, kterou si fakt udržíš.</h2>
-    <p class="lead">
-      Představ si paměť své AI jako fotky — uložené, na jednom místě, něco, k čemu se
-      vracíš. Ne něco, co zmizí ve chvíli, kdy zavřeš appku. KUSTOD dělá z paměti vědomý
-      návyk, takže parťák nabaluje hodnotu místo toho, aby se resetoval.
-    </p>
-    <div class="panel">
-      <div class="panel-head mono">shrnutí seance — 2 řádky, než zavřeš</div>
-      <ul>
-        <li>Co jsme rozhodli a proč.</li>
-        <li>Jedno otevřené téma, na které příště navážeš.</li>
-      </ul>
+    <div class="eyebrow-row">
+      <span class="eyebrow">03 / PAMĚŤ</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
     </div>
-    <p class="bridge mono">Tohle je ten návyk. <strong>Motor, který ho zautomatizuje, je od teď venku.</strong></p>
+    <div class="split split-r">
+      <div>
+        <h2 class="tight">Paměť, kterou si fakt udržíš.</h2>
+        <p class="lead">Ber paměť své AI jako fotky: uložené, na jednom místě, něco, čím se dá scrollovat zpátky — ne něco, co zmizí ve chvíli, kdy zavřeš záložku.</p>
+        <p class="lead" style="margin-bottom:0">KUSTOD z toho návyku dělá vědomou věc, takže parťák nabaluje hodnotu místo toho, aby se resetoval. Dva řádky. Pokaždé.</p>
+      </div>
+      <div class="panel panel-pad">
+        <div class="wrap-label">SHRNUTÍ SEANCE · 2 ŘÁDKY, NEŽ ZAVŘEŠ</div>
+        <div class="wrap-lines">
+          <div><span class="arrow" aria-hidden="true">→</span><span>Co jsme rozhodli a proč.</span></div>
+          <div><span class="arrow" aria-hidden="true">→</span><span>Jedno otevřené téma, na které příště navážeš.</span></div>
+        </div>
+        <p class="wrap-foot">To je ten návyk — ručně. Motor, který ho zautomatizuje, je níž.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- 5b — MOTOR -->
-<section id="engine">
+<section class="band" id="engine">
   <div class="container">
-    <div class="eyebrow">Motor</div>
-    <h2>IDENTITATIS — když návyk přeroste kopírování&nbsp;a&nbsp;vkládání.</h2>
-    <p class="lead">
-      Prompt výš ti dá parťáka na jednu seanci. Dvouřádkové shrnutí ho udrží,
-      dokud ho budeš vkládat pořád dokola. <strong>IDENTITATIS je ta smyčka, zapsaná.</strong>
-      Adresářová struktura a dva malé skripty: jeden přečte tvoji identitu a vytiskne ji,
-      druhý ukončí seanci a zapíše ji zpátky.
-    </p>
-
-    <div class="panel">
-      <div class="panel-head mono">ta smyčka</div>
-      <ul>
-        <li><span class="mono">identity.md</span> — kdo to je. Načte se první, pokaždé.</li>
-        <li><span class="mono">laws/</span> — jeden soubor na pravidlo, každé s důvodem, proč vzniklo.</li>
-        <li><span class="mono">handoff.md</span> — co bylo minule, nejnovější nahoře.</li>
-        <li><span class="mono">boot.py</span> vytiskne blok. Ty ho vložíš. <span class="mono">save.py</span> zapíše seanci zpátky.</li>
-      </ul>
+    <div class="eyebrow-row">
+      <span class="eyebrow blue">04 / MOTOR</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
     </div>
-
-    <p class="bridge mono">
-      Nevolá žádné API a nepotřebuje klíč — identita, která přežije jen na jednom
-      runtime, není identita, je to konfigurační soubor.
-    </p>
-
-    <div class="hero-cta-row">
-      <a href="https://github.com/ousher/IDENTITATIS" class="btn btn-primary" target="_blank" rel="noopener">Naklonuj to &mdash; MIT, bez závislostí</a>
-      <a href="https://www.tia-framework.com/efs.html" class="btn btn-ghost" target="_blank" rel="noopener">Paper, který za tím stojí</a>
+    <h2 class="tight" style="max-width:26ch">IDENTITATIS — až návyk přeroste kopírování&nbsp;a&nbsp;vkládání.</h2>
+    <p class="lead wide" style="margin-bottom:48px">Prompt ti dá parťáka na jednu seanci; dvouřádkové shrnutí ho udrží naživu, dokud ho budeš vkládat pořád dokola. IDENTITATIS je ta smyčka, zapsaná — adresářová struktura a dva malé skripty. Jeden přečte tvoji identitu a vytiskne ji. Druhý ukončí seanci a zapíše ji zpátky.</p>
+    <div class="grid grid-auto" style="margin-bottom:40px">
+      <div class="card-blue">
+        <div class="file">identity.md</div>
+        <p>Kdo to je. Načte se první, úplně pokaždé.</p>
+      </div>
+      <div class="card-blue">
+        <div class="file">laws/</div>
+        <p>Jeden soubor na pravidlo — každé s důvodem, proč vzniklo.</p>
+      </div>
+      <div class="card-blue">
+        <div class="file">handoff.md</div>
+        <p>Co bylo minule. Nejnovější nahoře.</p>
+      </div>
+      <div class="card-blue">
+        <div class="file">boot.py · save.py</div>
+        <p>Jeden vytiskne blok, který vložíš. Druhý zapíše seanci zpátky.</p>
+      </div>
     </div>
-
-    <p class="code-micro mono" style="margin-top:18px">
-      Co to nedělá: nevybere ti databázi, samo se nepřeškáluje přes tvoje kontextové
-      okno a nedá ti ty měsíce nasbírané zkušenosti, které z identity dělají něco,
-      co má cenu. <span class="mono">boot.py --check</span> ti řekne, jak daleko
-      od té zdi jsi a jak rychle se k ní blížíš.
-    </p>
+    <div class="split split-even">
+      <div>
+        <p class="lead" style="color:var(--ink-3);font-size:16px;margin-bottom:24px">Žádná volání API. Žádné klíče. Identita, která přežije jen na runtime jednoho dodavatele, není identita — je to konfigurační soubor.</p>
+        <div class="cta-row">
+          <a href="https://github.com/ousher/IDENTITATIS" class="btn btn-blue" target="_blank" rel="noopener">NAKLONUJ TO — MIT, BEZ ZÁVISLOSTÍ</a>
+          <a href="https://www.tia-framework.com/efs.html" class="btn btn-plain" target="_blank" rel="noopener">PAPER, KTERÝ ZA TÍM STOJÍ ↗</a>
+        </div>
+      </div>
+      <div class="limits">
+        <div class="label">CO TO NEDĚLÁ</div>
+        <p>Nevybere ti databázi. Samo se nepřeškáluje přes tvoje kontextové okno. Nedá ti ty měsíce nasbírané zkušenosti, díky kterým má identita vůbec cenu.</p>
+        <p class="kicker mono">boot.py --check ti řekne, jak daleko ta zeď je a jak rychle se k ní blížíš.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- 6 — SHOW IT -->
 <section id="show">
   <div class="container">
-    <div class="eyebrow">Radikální transparentnost</div>
-    <h2>Žádná registrace. Tady je ta věc.</h2>
-    <p class="lead">Vlož do nového chatu, doplň hranaté závorky, hotovo.</p>
+    <div class="eyebrow-row">
+      <span class="eyebrow">05 / RADIKÁLNÍ TRANSPARENTNOST</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <div class="show-head">
+      <h2>Žádná registrace. Tady je celý produkt.</h2>
+      <p>Vlož do nového chatu, doplň hranaté závorky, hotovo. Funguje v ChatGPT, Claude, Gemini — v čemkoli, co už používáš.</p>
+    </div>
     <div class="code-wrap">
-      <div class="code-head mono">
-        <span class="dots">kustod — aktivační prompt</span>
-        <button class="copy-btn" id="copyBtn" type="button" aria-label="Zkopírovat aktivační prompt">Kopírovat</button>
+      <div class="code-head">
+        <span class="label">KUSTOD — AKTIVAČNÍ PROMPT</span>
+        <button class="copy-btn" id="copyBtn" type="button" aria-label="Zkopírovat aktivační prompt">KOPÍROVAT</button>
       </div>
       <pre class="code" id="promptBox">Odteď jsi můj KUSTOD — pracovní parťák, ne přitakávač.
 
@@ -248,115 +267,123 @@ NÁVYK PAMĚTI
 
 Potvrď jednou větou, že to máš, a pak se zeptej na první věc, kterou potřebuješ vědět.</pre>
     </div>
-    <p class="code-micro mono">Funguje v ChatGPT, Claude, Gemini — v jakékoli chatovací AI, kterou už máš.</p>
   </div>
 </section>
 
 <!-- 7 — 3 GOLDEN IMAGES -->
+<section class="band">
+  <div class="container">
+    <div class="eyebrow-row">
+      <span class="eyebrow">06 / ZAČNI Z HOTOVÉHO</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <h2 class="mid">Tři lidé. Stejný parťák.</h2>
+    <div class="grid grid-wide">
+      <a href="https://github.com/ousher/kustod/blob/main/kustods/business-kustod.md" class="golden" target="_blank" rel="noopener">
+        <span class="who">OBCHOD · BDM · ZAKLADATELÉ</span>
+        <span class="title">Business</span>
+        <span class="desc">Hovory k pipeline, ceny, e-mail, který bys ještě neměl posílat.</span>
+        <span class="go">ZAČÍT Z TOHOHLE →</span>
+      </a>
+      <a href="https://github.com/ousher/kustod/blob/main/kustods/security-kustod.md" class="golden" target="_blank" rel="noopener">
+        <span class="who">SOC · PRESALES · ARCHITEKTI</span>
+        <span class="title">Security</span>
+        <span class="desc">Hovory o hrozbách, kde tě sebevědomá špatná odpověď stojí víkend.</span>
+        <span class="go">ZAČÍT Z TOHOHLE →</span>
+      </a>
+      <a href="https://github.com/ousher/kustod/blob/main/kustods/everyday-kustod.md" class="golden" target="_blank" rel="noopener">
+        <span class="who">ŽIVOT, NE PRÁCE · NETECHNICKY</span>
+        <span class="title">Everyday</span>
+        <span class="desc">Rozhodnutí, dopisy, formuláře — pro lidi, co nikdy neotevřou terminál.</span>
+        <span class="go">ZAČÍT Z TOHOHLE →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 8 — 7-DAY TEST -->
 <section>
   <div class="container">
-    <div class="eyebrow">Začni z hotového</div>
-    <h2>Tři lidé. Stejný parťák.</h2>
-    <div class="grid-3">
-      <div class="card">
-        <span class="emoji">💼</span>
-        <div class="who">obchod · BDM · zakladatelé</div>
-        <h3>Business</h3>
-        <p class="start"><a href="https://github.com/ousher/kustod/blob/main/kustods/business-kustod.md" target="_blank" rel="noopener">Začít z tohohle →</a></p>
+    <div class="eyebrow-row">
+      <span class="eyebrow">07 / NEBER MĚ ZA SLOVO</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <div class="split split-test">
+      <div>
+        <h2 class="tight">Sedmidenní test.</h2>
+        <p class="lead" style="margin-bottom:26px">Týden stačí, abys to věděl. Odjeď ho poctivě a pak se rozhodni, jestli si zaslouží trvalé místo.</p>
+        <div class="metric">
+          <div class="label">JEDINÁ METRIKA</div>
+          <p>Užitečný výstup do 24 hodin. Lajky se nepočítají. Pocity se nepočítají.</p>
+        </div>
       </div>
-      <div class="card">
-        <span class="emoji">🛡️</span>
-        <div class="who">SOC · presales · bezpečnostní architekti</div>
-        <h3>Security</h3>
-        <p class="start"><a href="https://github.com/ousher/kustod/blob/main/kustods/security-kustod.md" target="_blank" rel="noopener">Začít z tohohle →</a></p>
+      <ol class="days">
+        <li><span>Vlož prompt. Doplň své závorky. Seznam se se svým KUSTODem.</span></li>
+        <li><span>Přines mu reálný problém, na kterém fakt vázneš.</span></li>
+        <li><span>Schválně s ním nesouhlas — uvidíš, jestli si stojí za svým.</span></li>
+        <li><span>Ukonči seanci dvouřádkovým shrnutím. Někam ho ulož.</span></li>
+        <li><span>Příští seanci začni tím, že shrnutí vložíš zpátky.</span></li>
+        <li><span>Hoď mu něco rozházeného a nedodělaného.</span></li>
+        <li><span>Rozhodni: zasloužil si trvalé místo?</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 8b — KDE KONČÍ ZDARMA -->
+<section class="band" id="custody">
+  <div class="container">
+    <div class="eyebrow-row">
+      <span class="eyebrow">08 / KDE KONČÍ ZDARMA</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <div class="split split-even">
+      <div>
+        <h2 class="tight">Zdarma, dokud se na to spoléháš ty.</h2>
+        <p class="lead">Jeden člověk, jeden agent, jedna identita — to je celá volná vrstva, ne ukrojený kousek nějaké větší. Nic nevyprší, nic tě neotravuje a <em>boot.py --check</em> ti tvoje meze změří, aniž by ti přes ně cokoli prodával.</p>
       </div>
-      <div class="card">
-        <span class="emoji">🧓</span>
-        <div class="who">život, ne práce · netechnicky</div>
-        <h3>Everyday</h3>
-        <p class="start"><a href="https://github.com/ousher/kustod/blob/main/kustods/everyday-kustod.md" target="_blank" rel="noopener">Začít z tohohle →</a></p>
+      <div class="limits">
+        <div class="label">KDE TO PŘESTÁVÁ STAČIT</div>
+        <p>Ve chvíli, kdy se na toho agenta musí spolehnout <em>někdo další</em> — klient, auditor, nákup, regulátor — přestává „mně to funguje“ platit jako doklad. Které pravidlo v tu chvíli platilo. Jestli se pak změnilo. Co opustilo složku, co prošlo bránou, jak daleko sahal dosah.</p>
+        <p>To je kustodie nad tím, co agent <em>dělá</em>, a je to ta část, kterou stavíme pro prostředí, kde se chování agenta musí doložit, přezkoumat a ohraničit.</p>
+        <p class="ask">Potřebujete kustodii nad regulovaným procesem? <a href="mailto:ondrej@tia-framework.com?subject=Kustodie%20nad%20regulovan%C3%BDm%20procesem">ondrej@tia-framework.com</a></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 8 — 7-DAY TEST + ONE METRIC -->
-<section>
-  <div class="container">
-    <div class="eyebrow">Neber mě za slovo</div>
-    <h2>Sedmidenní test.</h2>
-    <ol class="days">
-      <li>Vlož prompt. Doplň své závorky. Seznam se se svým KUSTODem.</li>
-      <li>Přines mu reálný problém, na kterém vázneš.</li>
-      <li>Schválně s ním nesouhlas — uvidíš, jestli si stojí za svým.</li>
-      <li>Ukonči seanci dvouřádkovým shrnutím. Ulož ho.</li>
-      <li>Příští seanci začni tím, že shrnutí vložíš zpátky.</li>
-      <li>Hoď mu něco rozházeného a nedodělaného.</li>
-      <li>Rozhodni: zasloužil si trvalé místo?</li>
-    </ol>
-    <div class="metric">
-      <p class="q">Jediná metrika, na které záleží: <span class="mark">užitečný výsledek do 24 hodin.</span></p>
-      <p class="sub">Lajky se nepočítají. Pocity se nepočítají. Užitečný výstup ano.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 9 — CTA / FOOTER -->
+<!-- 9 — CTA -->
 <section class="final">
   <div class="container">
     <h2>Stáhni pack zdarma.</h2>
-    <a href="https://github.com/ousher/kustod" class="btn btn-primary" target="_blank" rel="noopener">Stáhnout pack zdarma</a>
-    <p class="funnel">Zkus to týden a pak mi napiš tu jednu věc, co tě zmátla.</p>
-    <p class="positioning mono"><span class="mark">Pracovní parťák pro lidi, co nikdy neotevřou terminál.</span></p>
+    <p>Zkus to týden a pak mi napiš tu jednu věc, co tě zmátla. To je celá prosba.</p>
+    <a href="https://github.com/ousher/kustod" class="btn btn-primary btn-lg" target="_blank" rel="noopener">STÁHNOUT PACK ZDARMA →</a>
+    <p class="micro">ZDARMA · MIT · JEDNA STRÁNKA</p>
   </div>
 </section>
 
-<footer>
+<footer class="site-foot">
   <div class="container">
-    <div>zdarma · MIT · jedna stránka</div>
-    <div>od člověka, kterého unavila AI, co jen přikyvuje · <a href="https://github.com/ousher/kustod" target="_blank" rel="noopener">github.com/ousher/kustod</a></div>
+    <span>Pracovní parťák pro lidi, co nikdy neotevřou terminál.</span>
+    <span>od člověka, kterého unavila AI, co jen přikyvuje · <a href="https://github.com/ousher/kustod" target="_blank" rel="noopener">github.com/ousher/kustod</a></span>
   </div>
 </footer>
 
 <script>
-  // Tlačítko Kopírovat pro aktivační prompt
+  // Tlačítko Kopírovat pro aktivační prompt.
   (function () {
     var btn = document.getElementById('copyBtn');
     var box = document.getElementById('promptBox');
     if (!btn || !box) return;
+    var done = function () {
+      btn.textContent = 'ZKOPÍROVÁNO ✓';
+      setTimeout(function () { btn.textContent = 'KOPÍROVAT'; }, 1800);
+    };
     btn.addEventListener('click', function () {
       var text = box.innerText.replace(/ /g, ' ');
-      navigator.clipboard.writeText(text).then(function () {
-        btn.textContent = 'Zkopírováno ✓';
-        btn.classList.add('copied');
-        setTimeout(function () { btn.textContent = 'Kopírovat'; btn.classList.remove('copied'); }, 1800);
-      });
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, done);
+      else done();
     });
-  })();
-
-  // Progresivní odhalování při scrollu — výchozí stav VIDITELNÝ, zapne se přes html.js-reveal.
-  // Nic se neschová, dokud není vše níže nastaveno — selhání (bez JS, bez IntersectionObserver,
-  // reduced-motion, výjimka) tak nikdy nemůže nechat obsah zaseknutý jako neviditelný.
-  (function () {
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce || !('IntersectionObserver' in window)) return;
-    var targets = document.querySelectorAll('section h2, .lead, .card, .chat, .panel, .code-wrap, .metric, .oneliner blockquote');
-    if (!targets.length) return;
-    var show = function (el) { el.classList.add('is-visible'); };
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-    // Skrývání zapni až teď, když observer existuje.
-    document.documentElement.classList.add('js-reveal');
-    targets.forEach(function (el, i) {
-      el.classList.add('reveal');
-      el.style.transitionDelay = (Math.min(i % 5, 4) * 0.05) + 's';
-      io.observe(el);
-    });
-    // Pojistka: kdyby observer nikdy nespustil trigger, odhal vše po 1,5 s.
-    setTimeout(function () { targets.forEach(show); }, 1500);
   })();
 </script>
 </body>

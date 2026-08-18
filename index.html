@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KUSTOD — a working partner that pushes back, and remembers why</title>
 <meta name="description" content="A free one-page setup that turns any chat AI into a consistent partner that challenges you and remembers you. 10 min, works in ChatGPT/Claude/etc.">
-<meta name="theme-color" content="#F7F6F2">
-<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0E0D0C">
+<meta name="color-scheme" content="dark">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://getkustod.com/">
@@ -24,6 +24,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- Open Graph / Twitter -->
 <meta property="og:title" content="KUSTOD — a working partner that pushes back, and remembers why">
@@ -41,7 +42,7 @@
 <meta name="twitter:title" content="KUSTOD — a working partner that pushes back">
 <meta name="twitter:description" content="Turn any chat AI into a partner that challenges you and remembers you. Free, one page, 10 min.">
 <meta name="twitter:image" content="https://getkustod.com/og-image.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/dark.css">
 
 <script type="application/ld+json">
 {
@@ -62,28 +63,30 @@
 <a href="#main" class="skip-link">Skip to content</a>
 
 <!-- NAV -->
-<nav>
-  <div class="container">
-    <a href="/" class="wordmark">KUSTOD <span class="v">v0.1</span></a>
-    <div class="nav-links">
-      <a href="/cs/" class="lang-switch" hreflang="cs">CS</a>
-      <a href="https://github.com/ousher/kustod" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://github.com/ousher/kustod" class="nav-cta" target="_blank" rel="noopener">Get the pack</a>
-    </div>
-  </div>
-</nav>
+<header class="site-head">
+  <a href="/" class="wordmark">
+    <span class="name">KUSTOD</span><span class="v">v0.1</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#rule" class="hide-sm">THE RULE</a>
+    <a href="#engine" class="hide-sm">IDENTITATIS</a>
+    <a href="#show" class="hide-sm">THE PROMPT</a>
+    <a href="/cs/" hreflang="cs">CS</a>
+    <a href="https://github.com/ousher/kustod" class="nav-cta" target="_blank" rel="noopener">GET THE PACK</a>
+  </nav>
+</header>
 
 <!-- 1 — HERO -->
 <section class="hero" id="main">
+  <div class="hero-glow" aria-hidden="true"></div>
   <div class="container">
-    <h1><span class="robot" aria-hidden="true"><span class="bot">🤖</span></span>Stop using AI that <span class="mark">agrees with you.</span></h1>
-    <p class="hero-sub">A working partner that pushes back — and remembers why.</p>
-    <p class="hero-micro mono">
-      10 min <span class="dot">·</span> works in the AI you already use <span class="dot">·</span> free <span class="dot">·</span> one page
-    </p>
-    <div class="hero-cta-row">
-      <a href="https://github.com/ousher/kustod" class="btn btn-primary" target="_blank" rel="noopener">Get the free pack</a>
-      <a href="#show" class="btn btn-ghost">See the actual thing</a>
+    <div class="pill"><span class="dot" aria-hidden="true"></span>FREE · MIT · ONE PAGE · 10 MINUTES</div>
+    <h1>Stop using AI that agrees with you.</h1>
+    <p class="hero-sub">KUSTOD is a working partner you configure once. It argues with you when you're wrong, and it remembers why you decided what you decided.</p>
+    <p class="hero-micro mono">not an agent · not a chatbot · not a subscription</p>
+    <div class="cta-row">
+      <a href="https://github.com/ousher/kustod" class="btn btn-primary" target="_blank" rel="noopener">GET THE FREE PACK →</a>
+      <a href="#show" class="btn btn-ghost">READ THE PROMPT</a>
     </div>
   </div>
 </section>
@@ -91,143 +94,159 @@
 <!-- 2 — ONE-LINER -->
 <section class="oneliner">
   <div class="container">
-    <blockquote>
-      Most AI makes you feel smarter.<br>
-      KUSTOD makes you <span class="mark">actually be smarter.</span>
-    </blockquote>
-    <p class="oneliner-sub">
-      Not an agent. Not a chatbot. A working partner you configure once —
-      and the value isn't magic, it's consistency over time.
-    </p>
+    <p class="oneliner-quote">Most AI makes you <em>feel</em> smarter.<br><span class="hit">KUSTOD makes you be smarter.</span></p>
+    <p class="oneliner-note">The value isn't magic. It's consistency over time — the same standards, the same memory, the same refusal to flatter you, session after session. That compounds. A clever one-off answer doesn't.</p>
   </div>
 </section>
 
 <!-- 3 — THE 4 THINGS -->
 <section>
   <div class="container">
-    <div class="eyebrow">What you set up</div>
-    <h2>Four small things. One consistent partner.</h2>
-    <div class="grid-4">
+    <div class="eyebrow-row">
+      <span class="eyebrow">01 / WHAT YOU SET UP</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <h2 class="narrow">Four small things. One partner that stays the same.</h2>
+    <div class="grid grid-auto">
       <div class="card">
-        <span class="num">1</span>
-        <h3>Your role &amp; goals</h3>
-        <p>So it stops giving generic answers and starts working on your actual problem.</p>
+        <span class="num">01</span>
+        <h3>Your role &amp; your goal</h3>
+        <p>It stops answering the generic version of your question and starts working on yours.</p>
       </div>
       <div class="card">
-        <span class="num">2</span>
+        <span class="num">02</span>
         <h3>Your working style</h3>
-        <p>Concise or deep, blunt or gentle. You decide how it talks to you.</p>
+        <p>Concise or deep. Blunt or gentle. You set the register once instead of re-negotiating it daily.</p>
       </div>
       <div class="card">
-        <span class="num">3</span>
+        <span class="num">03</span>
         <h3>A memory habit</h3>
-        <p>So you stop re-explaining yourself at the start of every session.</p>
+        <p>Two lines at the end of a session. You never explain yourself from scratch again.</p>
       </div>
       <div class="card">
-        <span class="num">4</span>
+        <span class="num">04</span>
         <h3>A correction loop</h3>
-        <p>So it challenges weak ideas instead of flattering you into a mistake.</p>
+        <p>It challenges a weak idea instead of flattering you all the way into the mistake.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4 — THE SPINE ⭐ -->
-<section class="spine" id="spine">
+<!-- 4 — THE SPINE -->
+<section class="band" id="rule">
   <div class="container">
-    <div class="eyebrow">The differentiator</div>
-    <h2>The one rule most AI quietly breaks.</h2>
-    <p class="lead">
-      Most tools are trained to be agreeable. A KUSTOD is told, explicitly, to push
-      back — to flag uncertainty, to warn you before a mistake, not after.
-    </p>
-    <div class="chat">
-      <div class="bubble you">
-        <span class="who">You</span>
-        Just write me a confident email saying we'll hit the deadline.
+    <div class="eyebrow-row">
+      <span class="eyebrow">02 / THE DIFFERENTIATOR</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <div class="split split-l">
+      <div>
+        <h2 class="tight">The one rule most AI quietly breaks.</h2>
+        <p class="lead">Agreeableness is a product decision, not a law of nature. A KUSTOD is told the opposite, explicitly: flag the uncertainty, name the risk, warn me <em>before</em> the mistake — not in the post-mortem.</p>
+        <p class="kicker">A partner that never says no<br>is just an expensive mirror.</p>
       </div>
-      <div class="bubble kustod">
-        <span class="who">▸ KUSTOD</span>
-        I can — but should I? You told me Tuesday two tasks are still open and one
-        depends on a reply you haven't gotten. Promise a date you might miss and you
-        spend next week apologising. Want the honest version that still sounds strong?
+      <div class="panel">
+        <div class="panel-head"><span class="live" aria-hidden="true"></span>LIVE EXCHANGE</div>
+        <div class="panel-body">
+          <div class="turn">
+            <div class="who">YOU</div>
+            <p>Write me a confident email saying we'll hit the deadline.</p>
+          </div>
+          <div class="hr" aria-hidden="true"></div>
+          <div class="turn kustod">
+            <div class="who">KUSTOD</div>
+            <p>I can — but should I? On Tuesday you told me two tasks are still open and one depends on a reply you haven't got. Promise a date you might miss and you spend next week apologising. Want the honest version that still sounds strong?</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 5 — MEMORY LIKE PHOTOS -->
+<!-- 5 — MEMORY -->
 <section>
   <div class="container">
-    <div class="eyebrow">Memory</div>
-    <h2>Memory you can actually keep.</h2>
-    <p class="lead">
-      Think of your AI's memory like your photos — saved, in one place, something you
-      scroll back to. Not gone the second you close the app. A KUSTOD makes the memory
-      habit explicit, so the partner compounds instead of resetting.
-    </p>
-    <div class="panel">
-      <div class="panel-head mono">session wrap — 2 lines before you close</div>
-      <ul>
-        <li>What we decided, and why.</li>
-        <li>The one open thread to pick up next time.</li>
-      </ul>
+    <div class="eyebrow-row">
+      <span class="eyebrow">03 / MEMORY</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
     </div>
-    <p class="bridge mono">This is the habit. <strong>The engine that automates it is now here.</strong></p>
+    <div class="split split-r">
+      <div>
+        <h2 class="tight">Memory you can actually keep.</h2>
+        <p class="lead">Treat your AI's memory like your photos: saved, in one place, something you can scroll back through — not gone the second the tab closes.</p>
+        <p class="lead" style="margin-bottom:0">KUSTOD makes the habit explicit, so the partner compounds instead of resetting. Two lines. Every time.</p>
+      </div>
+      <div class="panel panel-pad">
+        <div class="wrap-label">SESSION WRAP · 2 LINES BEFORE YOU CLOSE</div>
+        <div class="wrap-lines">
+          <div><span class="arrow" aria-hidden="true">→</span><span>What we decided, and why.</span></div>
+          <div><span class="arrow" aria-hidden="true">→</span><span>The one open thread to pick up next time.</span></div>
+        </div>
+        <p class="wrap-foot">That's the habit — done by hand. The engine that automates it is below.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- 5b — THE ENGINE -->
-<section id="engine">
+<section class="band" id="engine">
   <div class="container">
-    <div class="eyebrow">The engine</div>
-    <h2>IDENTITATIS — when the habit outgrows copy&nbsp;and&nbsp;paste.</h2>
-    <p class="lead">
-      The prompt above gives you a partner for one session. The 2&#8209;line wrap keeps it
-      going, as long as you keep pasting. <strong>IDENTITATIS is that loop, written down.</strong>
-      A folder layout and two small scripts: one reads your identity and prints it,
-      the other ends a session and writes it back.
-    </p>
-
-    <div class="panel">
-      <div class="panel-head mono">the loop</div>
-      <ul>
-        <li><span class="mono">identity.md</span> — who this is. Loaded first, every time.</li>
-        <li><span class="mono">laws/</span> — one file per rule, each with the reason it exists.</li>
-        <li><span class="mono">handoff.md</span> — what happened last time, newest on top.</li>
-        <li><span class="mono">boot.py</span> prints one block. You paste it. <span class="mono">save.py</span> writes the session back.</li>
-      </ul>
+    <div class="eyebrow-row">
+      <span class="eyebrow blue">04 / THE ENGINE</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
     </div>
-
-    <p class="bridge mono">
-      It calls no API and needs no key — an identity that only survives on one
-      vendor&#39;s runtime is a configuration file, not an identity.
-    </p>
-
-    <div class="hero-cta-row">
-      <a href="https://github.com/ousher/IDENTITATIS" class="btn btn-primary" target="_blank" rel="noopener">Clone it &mdash; MIT, no dependencies</a>
-      <a href="https://www.tia-framework.com/efs.html" class="btn btn-ghost" target="_blank" rel="noopener">The paper behind it</a>
+    <h2 class="tight" style="max-width:24ch">IDENTITATIS — for when the habit outgrows copy&#8209;paste.</h2>
+    <p class="lead wide" style="margin-bottom:48px">The prompt gives you a partner for one session; the two-line wrap keeps it alive as long as you keep pasting. IDENTITATIS is that loop, written down — a folder layout and two small scripts. One reads your identity and prints it. The other ends the session and writes it back.</p>
+    <div class="grid grid-auto" style="margin-bottom:40px">
+      <div class="card-blue">
+        <div class="file">identity.md</div>
+        <p>Who this is. Loaded first, every single time.</p>
+      </div>
+      <div class="card-blue">
+        <div class="file">laws/</div>
+        <p>One file per rule — each carrying the reason it exists.</p>
+      </div>
+      <div class="card-blue">
+        <div class="file">handoff.md</div>
+        <p>What happened last time. Newest on top.</p>
+      </div>
+      <div class="card-blue">
+        <div class="file">boot.py · save.py</div>
+        <p>One prints the block you paste. One writes the session back.</p>
+      </div>
     </div>
-
-    <p class="code-micro mono" style="margin-top:18px">
-      What it does not do: pick a database for you, scale past your context window
-      on its own, or hand you the months of accumulation that make an identity
-      worth anything. <span class="mono">boot.py --check</span> tells you how close
-      you are to that wall and how fast you are approaching it.
-    </p>
+    <div class="split split-even">
+      <div>
+        <p class="lead" style="color:var(--ink-3);font-size:16px;margin-bottom:24px">No API calls. No keys. An identity that only survives on one vendor's runtime isn't an identity — it's a configuration file.</p>
+        <div class="cta-row">
+          <a href="https://github.com/ousher/IDENTITATIS" class="btn btn-blue" target="_blank" rel="noopener">CLONE IT — MIT, NO DEPS</a>
+          <a href="https://www.tia-framework.com/efs.html" class="btn btn-plain" target="_blank" rel="noopener">THE PAPER BEHIND IT ↗</a>
+        </div>
+      </div>
+      <div class="limits">
+        <div class="label">WHAT IT DOES NOT DO</div>
+        <p>Pick a database for you. Scale past your context window on its own. Hand you the months of accumulation that make an identity worth anything.</p>
+        <p class="kicker mono">boot.py --check tells you how close that wall is, and how fast you're moving toward it.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- 6 — SHOW IT -->
 <section id="show">
   <div class="container">
-    <div class="eyebrow">Radical transparency</div>
-    <h2>No signup. Here's the actual thing.</h2>
-    <p class="lead">Paste it into a fresh chat, fill the brackets, done.</p>
+    <div class="eyebrow-row">
+      <span class="eyebrow">05 / RADICAL TRANSPARENCY</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <div class="show-head">
+      <h2>No signup. Here is the entire product.</h2>
+      <p>Paste it into a fresh chat, fill the brackets, done. Works in ChatGPT, Claude, Gemini — whatever you already use.</p>
+    </div>
     <div class="code-wrap">
-      <div class="code-head mono">
-        <span class="dots">kustod — activation prompt</span>
-        <button class="copy-btn" id="copyBtn" type="button" aria-label="Copy activation prompt">Copy</button>
+      <div class="code-head">
+        <span class="label">KUSTOD — ACTIVATION PROMPT</span>
+        <button class="copy-btn" id="copyBtn" type="button" aria-label="Copy activation prompt">COPY</button>
       </div>
       <pre class="code" id="promptBox">From now on, you're my KUSTOD — a working partner, not a yes-man.
 
@@ -247,115 +266,123 @@ MEMORY HABIT
 
 Confirm you've got it in one line, then ask me the first thing you need to know.</pre>
     </div>
-    <p class="code-micro mono">Works in ChatGPT, Claude, Gemini — any chat AI you already use.</p>
   </div>
 </section>
 
 <!-- 7 — 3 GOLDEN IMAGES -->
+<section class="band">
+  <div class="container">
+    <div class="eyebrow-row">
+      <span class="eyebrow">06 / START FROM A GOLDEN</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <h2 class="mid">Three people. Same partner.</h2>
+    <div class="grid grid-wide">
+      <a href="https://github.com/ousher/kustod/blob/main/kustods/business-kustod.md" class="golden" target="_blank" rel="noopener">
+        <span class="who">SALES · BDM · FOUNDERS</span>
+        <span class="title">Business</span>
+        <span class="desc">Pipeline calls, pricing, the email you shouldn't send yet.</span>
+        <span class="go">START FROM THIS →</span>
+      </a>
+      <a href="https://github.com/ousher/kustod/blob/main/kustods/security-kustod.md" class="golden" target="_blank" rel="noopener">
+        <span class="who">SOC · PRESALES · ARCHITECTS</span>
+        <span class="title">Security</span>
+        <span class="desc">Threat calls where a confident wrong answer costs you a weekend.</span>
+        <span class="go">START FROM THIS →</span>
+      </a>
+      <a href="https://github.com/ousher/kustod/blob/main/kustods/everyday-kustod.md" class="golden" target="_blank" rel="noopener">
+        <span class="who">LIFE, NOT WORK · NON-TECHNICAL</span>
+        <span class="title">Everyday</span>
+        <span class="desc">Decisions, letters, forms — for people who'll never open a terminal.</span>
+        <span class="go">START FROM THIS →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 8 — 7-DAY TEST -->
 <section>
   <div class="container">
-    <div class="eyebrow">Start from a golden</div>
-    <h2>Three people. Same partner.</h2>
-    <div class="grid-3">
-      <div class="card">
-        <span class="emoji">💼</span>
-        <div class="who">sales · BDM · founders</div>
-        <h3>Business</h3>
-        <p class="start"><a href="https://github.com/ousher/kustod/blob/main/kustods/business-kustod.md" target="_blank" rel="noopener">Start from this →</a></p>
+    <div class="eyebrow-row">
+      <span class="eyebrow">07 / DON'T TAKE MY WORD FOR IT</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <div class="split split-test">
+      <div>
+        <h2 class="tight">The 7&#8209;day test.</h2>
+        <p class="lead" style="margin-bottom:26px">One week is enough to know. Run it honestly and then decide whether it keeps a permanent spot.</p>
+        <div class="metric">
+          <div class="label">THE ONLY METRIC</div>
+          <p>A useful artifact within 24 hours. Likes don't count. Vibes don't count.</p>
+        </div>
       </div>
-      <div class="card">
-        <span class="emoji">🛡️</span>
-        <div class="who">SOC · presales · security architects</div>
-        <h3>Security</h3>
-        <p class="start"><a href="https://github.com/ousher/kustod/blob/main/kustods/security-kustod.md" target="_blank" rel="noopener">Start from this →</a></p>
+      <ol class="days">
+        <li><span>Paste the prompt. Fill your brackets. Meet your KUSTOD.</span></li>
+        <li><span>Bring it a real problem you're actually stuck on.</span></li>
+        <li><span>Disagree with it on purpose — see if it holds its ground.</span></li>
+        <li><span>End a session with the 2-line wrap. Save it somewhere.</span></li>
+        <li><span>Start the next session by pasting that wrap back.</span></li>
+        <li><span>Hand it something messy and half-formed.</span></li>
+        <li><span>Decide: did it earn a permanent spot?</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 8b — WHERE FREE STOPS -->
+<section class="band" id="custody">
+  <div class="container">
+    <div class="eyebrow-row">
+      <span class="eyebrow">08 / WHERE FREE STOPS</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <div class="split split-even">
+      <div>
+        <h2 class="tight">Free while you're the one relying on it.</h2>
+        <p class="lead">One person, one agent, one identity — that is the whole free tier, not a trial slice of a bigger one. Nothing expires, nothing nags you, and <em>boot.py --check</em> measures your limits without trying to sell you past them.</p>
       </div>
-      <div class="card">
-        <span class="emoji">🧓</span>
-        <div class="who">life, not work · non-technical</div>
-        <h3>Everyday</h3>
-        <p class="start"><a href="https://github.com/ousher/kustod/blob/main/kustods/everyday-kustod.md" target="_blank" rel="noopener">Start from this →</a></p>
+      <div class="limits">
+        <div class="label">WHERE IT STOPS BEING ENOUGH</div>
+        <p>The moment somebody <em>else</em> has to rely on that agent — a client, an auditor, procurement, a regulator — “it works for me” stops counting as evidence. Which rule was in force. Whether it changed afterwards. What left the folder, what passed the gate, how far the reach went.</p>
+        <p>That is custody over what an agent <em>does</em>, and it is the part we build for environments where agent behaviour has to be evidenced, reviewed and bounded.</p>
+        <p class="ask">Need custody for a regulated workflow? <a href="mailto:ondrej@tia-framework.com?subject=Custody%20for%20a%20regulated%20workflow">ondrej@tia-framework.com</a></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 8 — 7-DAY TEST + ONE METRIC -->
-<section>
-  <div class="container">
-    <div class="eyebrow">Don't take my word for it</div>
-    <h2>The 7-day test.</h2>
-    <ol class="days">
-      <li>Paste the prompt. Fill your brackets. Meet your KUSTOD.</li>
-      <li>Bring it a real problem you're stuck on.</li>
-      <li>Disagree with it on purpose — see if it holds its ground.</li>
-      <li>End a session with the 2-line wrap. Save it.</li>
-      <li>Start the next session by pasting the wrap back.</li>
-      <li>Hand it something messy and half-formed.</li>
-      <li>Decide: did it earn a permanent spot?</li>
-    </ol>
-    <div class="metric">
-      <p class="q">The one metric that matters: <span class="mark">a useful result within 24 hours.</span></p>
-      <p class="sub">Likes don't count. Vibes don't count. A useful artifact does.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 9 — CTA / FOOTER -->
+<!-- 9 — CTA -->
 <section class="final">
   <div class="container">
     <h2>Get the free pack.</h2>
-    <a href="https://github.com/ousher/kustod" class="btn btn-primary" target="_blank" rel="noopener">Get the free pack</a>
-    <p class="funnel">Try it for a week, then tell me the one thing that confused you.</p>
-    <p class="positioning mono"><span class="mark">A working partner for people who'll never open a terminal.</span></p>
+    <p>Try it for a week, then tell me the one thing that confused you. That's the whole ask.</p>
+    <a href="https://github.com/ousher/kustod" class="btn btn-primary btn-lg" target="_blank" rel="noopener">GET THE FREE PACK →</a>
+    <p class="micro">FREE · MIT · ONE PAGE</p>
   </div>
 </section>
 
-<footer>
+<footer class="site-foot">
   <div class="container">
-    <div>free · MIT · one page</div>
-    <div>made by a human who got tired of AI that nods · <a href="https://github.com/ousher/kustod" target="_blank" rel="noopener">github.com/ousher/kustod</a></div>
+    <span>A working partner for people who'll never open a terminal.</span>
+    <span>made by a human who got tired of AI that nods · <a href="https://github.com/ousher/kustod" target="_blank" rel="noopener">github.com/ousher/kustod</a></span>
   </div>
 </footer>
 
 <script>
-  // Copy button for the activation prompt
+  // Copy button for the activation prompt.
   (function () {
     var btn = document.getElementById('copyBtn');
     var box = document.getElementById('promptBox');
     if (!btn || !box) return;
+    var done = function () {
+      btn.textContent = 'COPIED ✓';
+      setTimeout(function () { btn.textContent = 'COPY'; }, 1800);
+    };
     btn.addEventListener('click', function () {
-      var text = box.innerText.replace(/ /g, ' ');
-      navigator.clipboard.writeText(text).then(function () {
-        btn.textContent = 'Copied ✓';
-        btn.classList.add('copied');
-        setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1800);
-      });
+      var text = box.innerText.replace(/ /g, ' ');
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, done);
+      else done();
     });
-  })();
-
-  // Progressive scroll-in reveal — default VISIBLE, opt-in via html.js-reveal.
-  // Nothing is hidden until everything below is wired up, so a failure (no JS,
-  // no IntersectionObserver, reduced-motion, a throw) can never leave content stuck.
-  (function () {
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce || !('IntersectionObserver' in window)) return;
-    var targets = document.querySelectorAll('section h2, .lead, .card, .chat, .panel, .code-wrap, .metric, .oneliner blockquote');
-    if (!targets.length) return;
-    var show = function (el) { el.classList.add('is-visible'); };
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-    // Engage hiding only now that the observer exists.
-    document.documentElement.classList.add('js-reveal');
-    targets.forEach(function (el, i) {
-      el.classList.add('reveal');
-      el.style.transitionDelay = (Math.min(i % 5, 4) * 0.05) + 's';
-      io.observe(el);
-    });
-    // Failsafe: if the observer never fires a trigger, reveal everything anyway.
-    setTimeout(function () { targets.forEach(show); }, 1500);
   })();
 </script>
 </body>
