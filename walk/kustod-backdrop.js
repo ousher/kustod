@@ -899,18 +899,18 @@ var w = class {
 		return this.pose === "shake" ? this.sprites.get(Math.floor(this.clock * 6) % 2 == 0 ? "shake" : "look-1") : this.pose === "wave" ? this.sprites.get(Math.floor(this.clock * 5) % 2 == 0 ? "wave" : "look-1") : this.sprites.get(e);
 	}
 	draw() {
-		let t = this.ctx, { canvas: r } = this, i = Math.min(2, window.devicePixelRatio || 1), a = r.clientWidth || 1280, o = r.clientHeight || 720, s = Math.round(a * i), c = Math.round(o * i);
-		(r.width !== s || r.height !== c) && (r.width = s, r.height = c), t.setTransform(1, 0, 0, 1, 0, 0), t.fillStyle = n.bg, t.fillRect(0, 0, s, c);
-		let l = Math.max(s / e, c / 720), u = e * l, d = 720 * l, f = (s - u) / 2, p = (c - d) / 2;
-		t.setTransform(l, 0, 0, l, f, p);
-		let g = this.scenes[this.sceneIndex];
-		if (g.room) {
-			let n = this.rooms.get(g.room);
+		let t = this.ctx, { canvas: r } = this, i = Math.min(2, window.devicePixelRatio || 1), a = Math.max(320, Math.min(window.innerWidth || 1280, 4096)), o = Math.max(180, Math.min(window.innerHeight || 720, 4096)), s = Math.min(r.clientWidth || 1280, a), c = Math.min(r.clientHeight || 720, o), l = Math.round(s * i), u = Math.round(c * i);
+		(r.width !== l || r.height !== u) && (r.width = l, r.height = u), t.setTransform(1, 0, 0, 1, 0, 0), t.fillStyle = n.bg, t.fillRect(0, 0, l, u);
+		let d = Math.max(l / e, u / 720), f = e * d, p = 720 * d, g = (l - f) / 2, _ = (u - p) / 2;
+		t.setTransform(d, 0, 0, d, g, _);
+		let v = this.scenes[this.sceneIndex];
+		if (v.room) {
+			let n = this.rooms.get(v.room);
 			n && (t.imageSmoothingEnabled = !0, t.imageSmoothingQuality = "high", t.drawImage(n, 0, 0, e, 720));
 		} else t.imageSmoothingEnabled = !0, h(t, this.clock);
-		this.drawOverlays(t, g.id), this.drawCharacter(t), m(t, this.particles);
-		let _ = this.fadeAlpha();
-		_ > .001 && (t.fillStyle = `rgba(12,12,12,${_})`, t.fillRect(-40, -40, 1360, 800));
+		this.drawOverlays(t, v.id), this.drawCharacter(t), m(t, this.particles);
+		let y = this.fadeAlpha();
+		y > .001 && (t.fillStyle = `rgba(12,12,12,${y})`, t.fillRect(-40, -40, 1360, 800));
 	}
 	drawOverlays(e, t) {
 		if (t === "yes-hall") for (let t of this.bubbles) t.popped || (l(e, t.x, t.y, t.rx, t.ry, n.dot), d(e, t.word, t.x, t.y - 7, n.dot, 2));
