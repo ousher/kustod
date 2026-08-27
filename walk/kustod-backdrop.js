@@ -746,10 +746,10 @@ var w = class {
 		b(this, "canvas", void 0), b(this, "ctx", void 0), b(this, "sprites", /* @__PURE__ */ new Map()), b(this, "rooms", /* @__PURE__ */ new Map()), b(this, "ready", !1), b(this, "paused", !1), b(this, "reduced", !1), b(this, "sceneIndex", 0), b(this, "clipIndex", 0), b(this, "clipT", 0), b(this, "x", -70), b(this, "airY", 0), b(this, "facing", 1), b(this, "pose", "walk"), b(this, "item", null), b(this, "fade", {
 			phase: "in",
 			t: 0
-		}), b(this, "particles", []), b(this, "clock", 0), b(this, "walkDist", 0), b(this, "bubbles", []), b(this, "drewX", !1), b(this, "waitMark", 0), b(this, "noMark", 0), b(this, "steam", []), b(this, "kickX", 0), b(this, "listeners", /* @__PURE__ */ new Set()), b(this, "raf", 0), b(this, "last", 0), b(this, "destroyed", !1), b(this, "scenes", g), b(this, "assetBase", "/"), b(this, "pendingIndex", 0), this.canvas = e;
+		}), b(this, "particles", []), b(this, "clock", 0), b(this, "walkDist", 0), b(this, "bubbles", []), b(this, "drewX", !1), b(this, "waitMark", 0), b(this, "noMark", 0), b(this, "steam", []), b(this, "kickX", 0), b(this, "listeners", /* @__PURE__ */ new Set()), b(this, "raf", 0), b(this, "last", 0), b(this, "destroyed", !1), b(this, "scenes", g), b(this, "assetBase", "/"), b(this, "anchorY", .5), b(this, "pendingIndex", 0), this.canvas = e;
 		let n = e.getContext("2d", { alpha: !1 });
 		if (!n) throw Error("canvas 2d unavailable");
-		if (this.ctx = n, t.assetBase && (this.assetBase = t.assetBase), t.sceneIds?.length) {
+		if (this.ctx = n, t.assetBase && (this.assetBase = t.assetBase), typeof t.anchorY == "number" && (this.anchorY = Math.min(1, Math.max(0, t.anchorY))), t.sceneIds?.length) {
 			let e = g.filter((e) => t.sceneIds.includes(e.id));
 			if (e.length === 0) throw Error(`no scene matched ${JSON.stringify(t.sceneIds)} — a silent empty list would render a blank canvas that looks like a slow load`);
 			this.scenes = e;
@@ -901,7 +901,7 @@ var w = class {
 	draw() {
 		let t = this.ctx, { canvas: r } = this, i = Math.min(2, window.devicePixelRatio || 1), a = Math.max(320, Math.min(window.innerWidth || 1280, 4096)), o = Math.max(180, Math.min(window.innerHeight || 720, 4096)), s = Math.min(r.clientWidth || 1280, a), c = Math.min(r.clientHeight || 720, o), l = Math.round(s * i), u = Math.round(c * i);
 		(r.width !== l || r.height !== u) && (r.width = l, r.height = u), t.setTransform(1, 0, 0, 1, 0, 0), t.fillStyle = n.bg, t.fillRect(0, 0, l, u);
-		let d = Math.max(l / e, u / 720), f = e * d, p = 720 * d, g = (l - f) / 2, _ = (u - p) / 2;
+		let d = Math.max(l / e, u / 720), f = e * d, p = 720 * d, g = (l - f) / 2, _ = (u - p) * this.anchorY;
 		t.setTransform(d, 0, 0, d, g, _);
 		let v = this.scenes[this.sceneIndex];
 		if (v.room) {
@@ -991,7 +991,8 @@ function k(e) {
 function A(e, t = "/walk/") {
 	let n = new w(e, {
 		assetBase: t,
-		sceneIds: ["yes-hall"]
+		sceneIds: ["yes-hall"],
+		anchorY: .94
 	}), r = O(), i = r ? r === "on" : !D(), a = !0, o = !0, s = /* @__PURE__ */ new Set(), c = () => {
 		let e = i && a && o;
 		n.paused !== !e && (n.paused = !e);

@@ -168,14 +168,14 @@ h2.narrow { max-width: 22ch; }
   display: block; width: 100%; height: 100%;
   opacity: 0; transition: opacity 900ms ease;
 }
-.hero-walk canvas[data-ready="1"] { opacity: .30; }
+.hero-walk canvas[data-ready="1"] { opacity: .46; }
 
 /* Type over a moving image loses contrast at the worst possible moment. */
 .hero-walk-scrim {
   position: absolute; inset: 0;
   background:
-    linear-gradient(90deg, rgba(14,13,12,.94) 0%, rgba(14,13,12,.66) 48%, rgba(14,13,12,.30) 100%),
-    linear-gradient(180deg, rgba(14,13,12,.60) 0%, rgba(14,13,12,.12) 40%, rgba(14,13,12,.86) 100%);
+    linear-gradient(90deg, rgba(14,13,12,.92) 0%, rgba(14,13,12,.55) 46%, rgba(14,13,12,.12) 100%),
+    linear-gradient(180deg, rgba(14,13,12,.52) 0%, rgba(14,13,12,.06) 42%, rgba(14,13,12,.58) 100%);
 }
 
 .hero-walk-toggle {
@@ -195,7 +195,7 @@ h2.narrow { max-width: 22ch; }
 
 @media (prefers-reduced-motion: reduce) { .hero-walk canvas { transition: none; } }
 @media (max-width: 640px) {
-  .hero-walk canvas[data-ready="1"] { opacity: .20; }
+  .hero-walk canvas[data-ready="1"] { opacity: .30; }
   .hero-walk-toggle { right: 14px; bottom: 12px; }
 }
 
