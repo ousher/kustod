@@ -199,6 +199,48 @@ h2.narrow { max-width: 22ch; }
   .hero-walk-toggle { right: 14px; bottom: 12px; }
 }
 
+/* ── THE WALK, IN A FRAME OF ITS OWN ───────────────────────────────────────
+   16:9 and uncropped, because six of the seven scenes are composed rooms with
+   their subject above the waistline. The hero shows the one scene that is
+   drawn geometry and survives any crop; everything else belongs here. */
+.walk-frame {
+  margin: 40px 0 0; position: relative;
+  border: 1px solid var(--line);
+  background: #0c0c0c;
+  overflow: hidden;
+}
+.walk-frame canvas {
+  display: block; width: 100%; aspect-ratio: 16 / 9;
+  opacity: 0; transition: opacity 700ms ease;
+}
+.walk-frame canvas[data-ready="1"] { opacity: 1; }
+
+.walk-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding: 12px 16px;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+.walk-cap {
+  font-family: var(--serif); font-size: 18px; color: var(--ink-2);
+  text-wrap: balance;
+}
+.walk-meta { display: inline-flex; align-items: center; gap: 14px; }
+.walk-count { font-size: 11px; letter-spacing: .16em; color: var(--muted-2); }
+.walk-btn {
+  background: none; border: 1px solid var(--line-3); border-radius: 2px;
+  color: var(--muted); font-size: 10px; letter-spacing: .16em;
+  text-transform: uppercase; padding: 6px 10px; cursor: pointer;
+  transition: color .15s ease, border-color .15s ease;
+}
+.walk-btn:hover, .walk-btn:focus-visible { color: var(--accent); border-color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) { .walk-frame canvas { transition: none; } }
+@media (max-width: 640px) {
+  .walk-bar { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .walk-cap { font-size: 16px; }
+}
+
 .pill {
   display: inline-flex; align-items: center; gap: 10px;
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;

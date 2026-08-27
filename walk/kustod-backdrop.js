@@ -1023,7 +1023,54 @@ function A(e, t = "/walk/") {
 	};
 	return u;
 }
-var j = document.querySelector("canvas[data-kustod-backdrop]");
-j && (window.kustodBackdrop = A(j, j.dataset.assetBase || "/walk/"));
+function j(e, t = "/walk/") {
+	let n = new w(e, { assetBase: t }), r = !D(), i = !0, a = !1, o = /* @__PURE__ */ new Set(), s = () => {
+		n.paused = !(r && i && a);
+	}, c = () => {
+		for (let e of o) e(r);
+	};
+	document.addEventListener("visibilitychange", () => {
+		i = !document.hidden, s();
+	});
+	let l = !1, u = () => {
+		l || (l = !0, n.boot().then(() => {
+			s(), n.start(), e.dataset.ready = "1";
+		}));
+	};
+	"IntersectionObserver" in window ? new IntersectionObserver((e) => {
+		e.some((e) => e.isIntersecting) && u(), a = e.some((e) => e.intersectionRatio > .33), s();
+	}, {
+		threshold: [
+			0,
+			.34,
+			.7
+		],
+		rootMargin: "400px 0px"
+	}).observe(e) : (a = !0, u());
+	let d = document.querySelector("[data-walk-caption]"), f = document.querySelector("[data-walk-count]");
+	n.onStatus((e) => {
+		d && e.ready && (d.textContent = e.caption), f && e.ready && (f.textContent = `${e.sceneIndex + 1} / ${e.sceneCount}`);
+	});
+	let p = {
+		isOn: () => r,
+		on() {
+			r = !0, u(), s(), c();
+		},
+		off() {
+			r = !1, s(), c();
+		},
+		toggle() {
+			return r ? p.off() : p.on(), r;
+		},
+		onChange(e) {
+			return o.add(e), e(r), () => o.delete(e);
+		}
+	};
+	return document.querySelector("[data-walk-next]")?.addEventListener("click", () => n.nextScene()), document.querySelector("[data-walk-play]")?.addEventListener("click", () => p.toggle()), p;
+}
+var M = document.querySelector("canvas[data-kustod-backdrop]");
+M && (window.kustodBackdrop = A(M, M.dataset.assetBase || "/walk/"));
+var N = document.querySelector("canvas[data-kustod-stage]");
+N && (window.kustodStage = j(N, N.dataset.assetBase || "/walk/"));
 //#endregion
-export { A as mountBackdrop };
+export { A as mountBackdrop, j as mountStage };
