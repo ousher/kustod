@@ -78,7 +78,23 @@
 
 <!-- 1 — HERO -->
 <section class="hero" id="main">
-  <div class="hero-glow" aria-hidden="true"></div>
+  <!--
+    The walk. One scene: the corridor of YES / SURE / OK / GREAT that the
+    custodian walks the length of without joining. It is not decoration for
+    the headline below — it is the headline, performed.
+    Built from TIA-SHARED/workbench/pixel walk kustod:
+      node node_modules/vite/bin/vite.js build --config vite.backdrop.config.ts
+    Motion is the viewer's call: reduced-motion means still, the toggle is
+    remembered, and nothing runs in a hidden tab or off screen.
+  -->
+  <div class="hero-walk" aria-hidden="true">
+    <canvas data-kustod-backdrop data-asset-base="/walk/"></canvas>
+    <div class="hero-walk-scrim"></div>
+  </div>
+  <button type="button" class="hero-walk-toggle" id="walkToggle" aria-pressed="true">
+    <span class="wt-dot" aria-hidden="true"></span>
+    <span class="wt-label">motion</span>
+  </button>
   <div class="container">
     <div class="pill"><span class="dot" aria-hidden="true"></span>FREE · MIT · ONE PAGE · 10 MINUTES</div>
     <h1>Stop using AI that agrees with you.</h1>
@@ -391,6 +407,25 @@ Confirm you've got it in one line, then ask me the first thing you need to know.
       else done();
     });
   })();
+</script>
+
+<script type="module" src="/walk/kustod-backdrop.js"></script>
+<script type="module">
+  // Module scripts run in order, so the backdrop has mounted by the time this
+  // one does. If it did not — a blocked file, an old browser — the toggle
+  // removes itself rather than sitting there doing nothing.
+  const btn = document.getElementById('walkToggle');
+  const api = window.kustodBackdrop;
+  if (!btn) { /* nothing to wire */ }
+  else if (!api) { btn.remove(); }
+  else {
+    api.onChange((on) => {
+      btn.setAttribute('aria-pressed', String(on));
+      btn.querySelector('.wt-label').textContent = on ? 'motion' : 'still';
+      btn.title = on ? 'Stop the walk' : 'Let the walk run';
+    });
+    btn.addEventListener('click', () => api.toggle());
+  }
 </script>
 </body>
 </html>
