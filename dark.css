@@ -170,12 +170,20 @@ h2.narrow { max-width: 22ch; }
 }
 .hero-walk canvas[data-ready="1"] { opacity: .46; }
 
-/* Type over a moving image loses contrast at the worst possible moment. */
+/* Type over a moving image loses contrast at the worst possible moment.
+   🔴 But the scrim protects the TEXT, not half the picture. The first version
+   darkened the whole left side — and the left side is where the YES / SURE /
+   OK bubbles are, which are the entire point of the scene. The custodian was
+   visible walking a corridor; what he was walking through was not.
+   The column of type gets a tight ellipse; the rest keeps a light floor. */
 .hero-walk-scrim {
   position: absolute; inset: 0;
   background:
-    linear-gradient(90deg, rgba(14,13,12,.92) 0%, rgba(14,13,12,.55) 46%, rgba(14,13,12,.12) 100%),
-    linear-gradient(180deg, rgba(14,13,12,.52) 0%, rgba(14,13,12,.06) 42%, rgba(14,13,12,.58) 100%);
+    radial-gradient(78% 120% at 22% 52%, rgba(14,13,12,.93) 0%,
+                                          rgba(14,13,12,.72) 34%,
+                                          rgba(14,13,12,.18) 68%,
+                                          rgba(14,13,12,0) 100%),
+    linear-gradient(180deg, rgba(14,13,12,.46) 0%, rgba(14,13,12,.04) 44%, rgba(14,13,12,.52) 100%);
 }
 
 .hero-walk-toggle {

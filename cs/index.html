@@ -42,7 +42,7 @@
 <meta name="twitter:title" content="KUSTOD — pracovní parťák, který si stojí za svým">
 <meta name="twitter:description" content="Z jakékoli chatovací AI udělej parťáka, co ti oponuje a pamatuje si tě. Zdarma, jedna stránka, 10 minut.">
 <meta name="twitter:image" content="https://getkustod.com/og-image.png">
-<link rel="stylesheet" href="/dark.css?v=163c">
+<link rel="stylesheet" href="/dark.css?v=163d">
 
 <script type="application/ld+json">
 {
@@ -79,7 +79,20 @@
 
 <!-- 1 — HERO -->
 <section class="hero" id="main">
+  <!--
+    Chůze. Jedna scéna: chodba ANO / JASNĚ / OK / SKVĚLÉ, kterou kustod projde
+    celou a k žádné se nepřidá. Není to výzdoba k nadpisu — je to ten nadpis
+    provedený. Sestaveno z TIA-SHARED/workbench/pixel walk kustod.
+  -->
+  <div class="hero-walk" aria-hidden="true">
+    <canvas data-kustod-backdrop data-asset-base="/walk/"></canvas>
+    <div class="hero-walk-scrim"></div>
+  </div>
   <div class="hero-glow" aria-hidden="true"></div>
+  <button type="button" class="hero-walk-toggle" id="walkToggle" aria-pressed="true">
+    <span class="wt-dot" aria-hidden="true"></span>
+    <span class="wt-label">pohyb</span>
+  </button>
   <div class="container">
     <div class="pill"><span class="dot" aria-hidden="true"></span>ZDARMA · MIT · JEDNA STRÁNKA · 10 MINUT</div>
     <h1>Přestaň používat AI, která ti dává za pravdu.</h1>
@@ -97,6 +110,40 @@
   <div class="container">
     <p class="oneliner-quote">Většina AI ti dá <em>pocit</em>, že jsi chytřejší.<br><span class="hit">S KUSTODem jsi chytřejší doopravdy.</span></p>
     <p class="oneliner-note">Není v tom kouzlo. Je v tom konzistence v čase — stejná laťka, stejná paměť, stejná neochota ti pochlebovat, seance za seancí. To se nabaluje. Chytrá jednorázová odpověď ne.</p>
+  </div>
+</section>
+
+<!-- 2.5 — CHŮZE
+     Sedm scén, sedm návyků. V hrdinovi běží jedna z nich za nadpisem; tady
+     dostane zbylých šest rám dost vysoký na to, aby to byly místnosti, a ne
+     nohy od nábytku. Obrázky místností se stahují, až když se sem doscrolluje.
+     🔴 Sedm titulků zůstává anglicky ZÁMĚRNĚ: jsou to kanonické názvy těch
+     sedmi návyků, stejné v obou jazycích i v samotném produktu. Přeložit je
+     tady by znamenalo mít dvě jména pro jednu věc. -->
+<section class="walk-section" id="walk">
+  <div class="container">
+    <div class="eyebrow-row">
+      <span class="eyebrow">CHŮZE</span>
+      <span class="eyebrow-rule" aria-hidden="true"></span>
+    </div>
+    <h2 class="narrow tight">Sedm návyků. Ani jeden z nich není funkce.</h2>
+    <p class="lead wide">Tohle je celé, v sedmi místnostech: co parťák dělá,
+      když zrovna nehraje divadlo pro tebe. Žádný zvuk, není na co klikat,
+      nic se nesbírá.</p>
+
+    <figure class="walk-frame">
+      <canvas data-kustod-stage data-asset-base="/walk/"
+              role="img"
+              aria-label="Pixelová animace: kustod prochází sedmi místnostmi, v každé jeden návyk — přizná nejistotu, projde chodbou souhlasu a nepřidá se, založí dvouřádkové shrnutí, pojmenuje riziko, varuje předem, pamatuje si proč, a vydrží."></canvas>
+      <figcaption class="walk-bar">
+        <span class="walk-cap" data-walk-caption>KUSTOD</span>
+        <span class="walk-meta">
+          <span class="walk-count mono" data-walk-count>—</span>
+          <button type="button" class="walk-btn mono" data-walk-play>pauza</button>
+          <button type="button" class="walk-btn mono" data-walk-next>další</button>
+        </span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -392,6 +439,25 @@ Potvrď jednou větou, že to máš, a pak se zeptej na první věc, kterou pot�
       else done();
     });
   })();
+</script>
+
+<script type="module" src="/walk/kustod-backdrop.js?v=163d"></script>
+<script type="module">
+  // Moduly běží v pořadí, takže pozadí je v tuhle chvíli namontované. Kdyby
+  // nebylo — blokovaný soubor, starý prohlížeč — tlačítko se odstraní, místo
+  // aby tam sedělo a nic nedělalo.
+  const btn = document.getElementById('walkToggle');
+  const api = window.kustodBackdrop;
+  if (!btn) { /* není co drátovat */ }
+  else if (!api) { btn.remove(); }
+  else {
+    api.onChange((on) => {
+      btn.setAttribute('aria-pressed', String(on));
+      btn.querySelector('.wt-label').textContent = on ? 'pohyb' : 'klid';
+      btn.title = on ? 'Zastavit chůzi' : 'Nechat chůzi běžet';
+    });
+    btn.addEventListener('click', () => api.toggle());
+  }
 </script>
 </body>
 </html>
